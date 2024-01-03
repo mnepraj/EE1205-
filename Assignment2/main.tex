@@ -1,0 +1,56 @@
+% \iffalse
+\documentclass[journal,12pt,twocolumn]{article}
+\usepackage{amsmath,amssymb,amsfonts,amsthm}
+\usepackage{txfonts}
+\usepackage{tkz-euclide} 
+\usepackage{listings}
+\usepackage{gvv}       
+\usepackage[latin1]{inputenc}   
+\usepackage{array}  
+
+\begin{document}
+
+\bibliographystyle{IEEEtran}
+
+\vspace{3cm}
+
+\title{}
+\author{EE23BTECH11217 - Prajwal M$^{*}$
+}
+\maketitle
+\newpage
+\bigskip
+
+\renewcommand{\thefigure}{\theenumi}
+\renewcommand{\thetable}{\theenumi}
+
+\section*{Exercise 9.5}
+\noindent25) \hspace{2pt} \textbf{Find the sum of the following series up to n terms:}
+\[
+\frac{1^3}{1} + \frac{1^3 + 2^3}{1 + 3} + \frac{1^3 + 2^3 + 3^3}{1 + 3 + 5} + \ldots
+\] \\
+
+\noindent Solution: 
+
+\noindent Given:
+
+\begin{align*}
+    S_n & = \frac{1^3}{1} + \frac{1^3 + 2^3}{1 + 3} + \ldots + a_n \\
+\end{align*}
+
+let \(a_r\) be the general term, where
+\begin{align*}
+    a_r & = \frac{\sum_{i=1}^{r} i^3}{\sum_{j=1}^{r} (2j-1)} \\
+    & = \dfrac{\left(\frac{r(r + 1)}{2}\right)^2 }{r^2} \\
+    & = \frac{(r + 1)^2}{4} \\
+\end{align*}
+let \(S_n\) be sum of series upto n terms, where
+\begin{align*}
+    S_n & = \sum_{r=1}^{n} a_r \\
+    & = \sum_{r=1}^{n} \frac{(r + 1)^2}{4} \\
+    & = \frac{\sum_{r=1}^{n+1} r^2 - 1}{4} \\
+    & = \frac{n(n+1)(n+2)}{24} - \frac{1}{4} \\
+\end{align*}
+
+\end{document}
+
